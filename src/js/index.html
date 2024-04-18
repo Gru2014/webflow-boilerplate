@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .animation {
+      animation: moveBackground linear 2s infinite;
+      width: 5px;
+      height: 450px;
+      background-image: url('../images/border.svg');
+      position: absolute;
+    }
+
+    @keyframes moveBackground {
+      from {
+
+        left: -5px;
+        bottom: 100%;
+        height: 0%
+      }
+
+      to {
+        left: -5px;
+        bottom: 100%;
+        height: 100%
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div
+    style="width: 100%; height: 100vh; display: flex;  align-items: center; justify-content: center; background-color: black;">
+    <div style="display: flex; align-items: end; position: relative;">
+      <div style="width: 450px; height: 630px; background-color: chocolate;"></div>
+      <div class="animation ">
+        <!-- <img src="../images/border.svg" /> -->
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

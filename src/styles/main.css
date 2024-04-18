@@ -1,0 +1,199 @@
+@media screen and (max-width:1024px) {
+  [carousel="wrap"] {
+    --3d-carousel-item-width: 60vw;
+    --3d-carousel-gap: 40vw;
+  }
+
+}
+
+@media screen and (max-width: 768px) {
+  .carousel_container {
+    animation: moveBackground linear 180s infinite;
+  }
+}
+
+[carousel="wrap"] {
+  will-change: contents;
+  --3d-carousel-item-width: 30vw;
+  --3d-carousel-gap: 30vw;
+  --3d-carousel-rotate: 0deg;
+  --3d-carousel-z: 0px;
+}
+
+@media screen and (max-width: 768px) {
+  [carousel="wrap"] {
+    --3d-carousel-item-width: 70vw;
+    --3d-carousel-gap: 40vw;
+  }
+}
+
+.collection-item-2.smaller {
+  height: 55vh;
+}
+
+.btn-more:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  z-index: -2;
+}
+
+.btn-more:before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+  transition: all .3s;
+  z-index: -1;
+}
+
+.project-card:hover .line-animation {
+  display: block;
+}
+
+.btn-more:hover {
+  color: #fff;
+
+  &:before {
+    width: 100%;
+  }
+}
+
+[role="listitem"] {
+  width: var(--3d-carousel-item-width);
+}
+
+.collection-list {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  position: relative;
+}
+
+.collection-item {
+  background-size: cover;
+  background-position: center;
+}
+
+.collection-item-2 {
+  height: 40vh;
+}
+
+.collection-list {
+  transform-style: preserve-3d;
+  transform: translate3d(0px, 0px, var(--3d-carousel-z)) rotateX(0deg) rotateY(var(--3d-carousel-rotate));
+}
+
+.img-zoom:hover .img-project {
+  transform: scale(1.1);
+}
+
+.img-zoom:hover .line-animation {
+  display: block;
+}
+
+.img-project {
+  background-size: cover;
+}
+
+.span-1 {
+  animation: animate1 2s linear infinite;
+}
+
+.span-2 {
+  animation: animate2 2s linear infinite;
+  animation-delay: 1s;
+}
+
+.span-3 {
+  animation: animate3 2s linear infinite;
+}
+
+.span-4 {
+  animation: animate4 2s linear infinite;
+  animation-delay: 1s;
+}
+
+
+.line-1 {
+  animation: animate1 4s linear infinite;
+}
+
+.line-2 {
+  animation: animate2 4s linear infinite;
+  animation-delay: -2s;
+}
+
+.line-3 {
+  animation: animate3 4s linear infinite;
+}
+
+.line-4 {
+  animation: animate4 4s linear infinite;
+  animation-delay: -2s;
+}
+
+@keyframes animate1 {
+  0% {
+    transform: translateY(-100%);
+  }
+
+  100% {
+    transform: translateY(100%);
+  }
+}
+
+@keyframes animate2 {
+  0% {
+    transform: translateX(125%);
+  }
+
+  100% {
+    transform: translate(-125%);
+  }
+
+}
+
+
+@keyframes animate3 {
+  0% {
+    transform: translateY(100%);
+  }
+
+  100% {
+    transform: translateY(-100%);
+  }
+}
+
+
+@keyframes animate4 {
+  0% {
+    transform: translateX(-125%);
+  }
+
+  100% {
+    transform: translate(125%);
+  }
+}
+
+
+.project {
+  animation: moveBackground linear 140s infinite;
+}
+
+@keyframes moveBackground {
+  from {
+    background-position: 0 0;
+  }
+
+  to {
+    background-position: 100% 0;
+  }
+}

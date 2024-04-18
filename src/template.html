@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+
+    <title><%= htmlWebpackPlugin.options.title %></title>
+    <style>
+      div {
+        height: 100vh;
+        width: 100vw;
+      }
+
+      div.a {
+        background: red;
+        /* position: fixed; */
+      }
+
+      div.c {
+        background: red;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="root">
+      <div class="a">A</div>
+      <div class="b" id="pined-panel">B</div>
+      <div class="c">C</div>
+      <div class="d">D</div>
+    </div>
+  </body>
+</html>
